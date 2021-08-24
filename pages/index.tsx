@@ -1,10 +1,10 @@
-import Link from "next/link";
-import { styled } from "@stitches/react";
-import Head from "next/head";
-import { ShaderCanvas } from "../components/ShaderCanvas";
-import { getShaders, Shader } from "../lib/getShaders";
+import { styled } from '@stitches/react';
+import Head from 'next/head';
+import { ShaderCanvas } from '../components/ShaderCanvas';
+import type { Shader } from '../lib/getShaders';
+import { getShaders } from '../lib/getShaders';
 
-export async function getStaticProps() {
+export const getStaticProps = () => {
   const shaders = getShaders();
 
   return {
@@ -12,19 +12,19 @@ export async function getStaticProps() {
       shaders,
     },
   };
-}
+};
 
-const Grid = styled("ul", {
-  width: "100vw",
-  padding: "48px",
-  display: "flex",
-  flexDirection: "row",
-  "& > * + *": {
-    marginLeft: "24px",
+const Grid = styled('ul', {
+  '& > * + *': {
+    marginLeft: '24px',
   },
+  display: 'flex',
+  flexDirection: 'row',
+  padding: '48px',
+  width: '100vw',
 });
 
-export default function Home({ shaders }: { shaders: Array<Shader> }) {
+export default function Home({ shaders }: { shaders: Shader[] }) {
   return (
     <>
       <Head>

@@ -54,29 +54,8 @@ export default function Layout({
               width={144}
               alt={name}
             />
-            <HeaderName className={utilStyles.heading2Xl}>{name}</HeaderName>
           </>
-        ) : (
-          <>
-            <Link href="/">
-              <a>
-                <Image
-                  priority
-                  src="/images/rick.jpg"
-                  className={utilStyles.borderCircle}
-                  height={108}
-                  width={108}
-                  alt={name}
-                />
-              </a>
-            </Link>
-            <h2 className={utilStyles.headingLg}>
-              <Link href="/">
-                <a className={utilStyles.colorInherit}>{name}</a>
-              </Link>
-            </h2>
-          </>
-        )}
+        ) : null}
       </Header>
       <main>{children}</main>
       {!home && (

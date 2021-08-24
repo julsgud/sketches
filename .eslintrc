@@ -1,3 +1,18 @@
 {
-  "extends": ["next", "next/core-web-vitals"]
+  "extends": [
+    "next",
+    "next/core-web-vitals",
+    "canonical",
+    "canonical/react",
+    "canonical/typescript"
+  ],
+  "parserOptions": {
+    "project": "./tsconfig.json"
+  },
+  "rules": {
+    // Override our default settings just for this directory
+    "eqeqeq": "warn",
+    "filenames/match-exported": false,
+    "strict": "off"
+  }
 }

@@ -1,8 +1,8 @@
-import Link from "next/link";
 import Head from "next/head";
-import utilStyles from "../../styles/utils.module.css";
 import Image from "next/image";
-import Layout from "../../components/layout";
+import Link from "next/link";
+import Layout from "../../components/Layout";
+import utilStyles from "../../styles/utils.module.css";
 
 export default function About() {
   return (

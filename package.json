@@ -10,8 +10,11 @@
   },
   "dependencies": {
     "@stitches/react": "^0.2.3",
+    "eslint-config-canonical": "^26.2.3",
     "gray-matter": "^4.0.3",
     "next": "11.0.1",
+    "ogl": "^0.0.73",
+    "ogl-typescript": "^0.1.40",
     "react": "17.0.2",
     "react-dom": "17.0.2"
   },

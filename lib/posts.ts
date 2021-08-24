@@ -2,10 +2,10 @@ import fs from "fs";
 import path from "path";
 import matter from "gray-matter";
 
-const postsDirectory = path.join(process.cwd(), "pages/about/posts");
+const postsDirectory = path.join(process.cwd(), "pages/sketches");
 
 export function getPostData(id: string) {
-  const fullPath = path.join(postsDirectory, `${id}.md`);
+  const fullPath = path.join(postsDirectory, `${id}.ts`);
   const fileContents = fs.readFileSync(fullPath, "utf8");
 
   // Use gray-matter to parse the post metadata section
@@ -22,8 +22,8 @@ export function getSortedPostsData() {
   // Get file names under /posts
   const fileNames = fs.readdirSync(postsDirectory);
   const allPostsData = fileNames.map((fileName) => {
-    // Remove ".md" from file name to get id
-    const id = fileName.replace(/\.md$/, "");
+    // Remove ".ts" from file name to get id
+    const id = fileName.replace(/\.ts$/, "");
 
     // Read markdown file as string
     const fullPath = path.join(postsDirectory, fileName);

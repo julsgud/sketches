@@ -8,11 +8,17 @@
     "start": "next start",
     "lint": "next lint"
   },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
   "dependencies": {
     "@stitches/react": "^0.2.3",
     "eslint-config-canonical": "^26.2.3",
     "eslint-config-prettier": "^8.3.0",
     "gray-matter": "^4.0.3",
+    "husky": "^7.0.1",
     "next": "11.0.1",
     "ogl": "^0.0.73",
     "ogl-typescript": "^0.1.40",
